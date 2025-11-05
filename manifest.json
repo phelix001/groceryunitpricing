@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "Grocery Unit Price Comparison",
+  "version": "1.0.0",
+  "description": "Automatically displays unit pricing on grocery shopping sites to help compare products",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.amazon.com/*",
+    "*://*.walmart.com/*",
+    "*://*.instacart.com/*",
+    "*://*.costco.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.amazon.com/*"],
+      "js": ["src/lib/converter.js", "src/lib/parser.js", "src/lib/calculator.js", "src/lib/formatter.js", "src/content/common.js", "src/content/amazon.js"],
+      "css": ["src/styles/content.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.walmart.com/*"],
+      "js": ["src/lib/converter.js", "src/lib/parser.js", "src/lib/calculator.js", "src/lib/formatter.js", "src/content/common.js", "src/content/walmart.js"],
+      "css": ["src/styles/content.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.instacart.com/*"],
+      "js": ["src/lib/converter.js", "src/lib/parser.js", "src/lib/calculator.js", "src/lib/formatter.js", "src/content/common.js", "src/content/instacart.js"],
+      "css": ["src/styles/content.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.costco.com/*", "*://sameday.costco.com/*"],
+      "js": ["src/lib/converter.js", "src/lib/parser.js", "src/lib/calculator.js", "src/lib/formatter.js", "src/content/common.js", "src/content/costco.js"],
+      "css": ["src/styles/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

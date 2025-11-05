@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Unit Price Comparison</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header>
+      <h1>🛒 Grocery Unit Pricing</h1>
+      <p class="subtitle">Compare products easily</p>
+    </header>
+
+    <main>
+      <section class="status">
+        <div class="status-indicator">
+          <span class="status-dot active" id="statusDot"></span>
+          <span id="statusText">Extension Active</span>
+        </div>
+      </section>
+
+      <section class="settings">
+        <h2>Settings</h2>
+
+        <div class="setting-item">
+          <label for="preferredUnit">Preferred Unit System:</label>
+          <select id="preferredUnit">
+            <option value="imperial">Imperial (oz, lb)</option>
+            <option value="metric">Metric (g, kg)</option>
+          </select>
+        </div>
+
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" id="enableAmazon" checked>
+            Enable on Amazon
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" id="enableWalmart" checked>
+            Enable on Walmart
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" id="enableInstacart" checked>
+            Enable on Instacart
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" id="enableCostco" checked>
+            Enable on Costco
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" id="debugMode">
+            Enable Debug Mode
+          </label>
+        </div>
+      </section>
+
+      <section class="info">
+        <h2>How It Works</h2>
+        <p>This extension automatically calculates and displays unit prices on supported grocery shopping sites, helping you compare products and find the best value.</p>
+
+        <h3>Supported Sites:</h3>
+        <ul>
+          <li>Amazon.com</li>
+          <li>Walmart.com</li>
+          <li>Instacart.com</li>
+          <li>Costco.com</li>
+        </ul>
+      </section>
+
+      <footer>
+        <p class="version">Version 1.0.0</p>
+        <button id="saveSettings" class="btn-primary">Save Settings</button>
+      </footer>
+    </main>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

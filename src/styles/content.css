@@ -1,0 +1,149 @@
+/**
+ * Styles for unit price display across all shopping sites
+ */
+
+/* Main unit price display */
+.unit-price-extension {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  background-color: #f0f8ff;
+  border: 1px solid #4a90e2;
+  border-radius: 3px;
+  color: #2c5aa0;
+  font-size: 0.85em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Detailed unit price with tooltip */
+.unit-price-extension-detailed {
+  display: inline-block;
+  position: relative;
+  margin-left: 8px;
+}
+
+.unit-price-value {
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: #f0f8ff;
+  border: 1px solid #4a90e2;
+  border-radius: 3px;
+  color: #2c5aa0;
+  font-size: 0.85em;
+  font-weight: 600;
+  cursor: help;
+}
+
+.unit-price-tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 5px;
+  padding: 4px 8px;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.75em;
+  white-space: nowrap;
+  border-radius: 3px;
+  z-index: 1000;
+}
+
+.unit-price-extension-detailed:hover .unit-price-tooltip {
+  display: block;
+}
+
+/* Best value badge */
+.unit-price-best-value {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  border: 1px solid #daa520;
+  border-radius: 3px;
+  color: #8b4513;
+  font-size: 0.8em;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .unit-price-extension {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+    font-size: 0.8em;
+  }
+
+  .unit-price-extension-detailed {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  .unit-price-best-value {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+}
+
+/* Site-specific adjustments */
+
+/* Amazon */
+[data-component-type="s-search-result"] .unit-price-extension,
+.s-result-item .unit-price-extension {
+  margin-top: 4px;
+}
+
+/* Walmart */
+[data-automation-id="product"] .unit-price-extension {
+  margin-top: 4px;
+}
+
+/* Instacart */
+[data-testid="product-card"] .unit-price-extension {
+  margin-top: 4px;
+  font-size: 0.8em;
+}
+
+/* Costco */
+.product-tile .unit-price-extension {
+  margin-top: 4px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .unit-price-extension {
+    background-color: #1a3a52;
+    border-color: #4a90e2;
+    color: #79b8f3;
+  }
+
+  .unit-price-value {
+    background-color: #1a3a52;
+    border-color: #4a90e2;
+    color: #79b8f3;
+  }
+
+  .unit-price-tooltip {
+    background-color: #555;
+  }
+
+  .unit-price-best-value {
+    background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
+    color: #ffe4b5;
+  }
+}
+
+/* Print styles - hide unit prices when printing */
+@media print {
+  .unit-price-extension,
+  .unit-price-extension-detailed,
+  .unit-price-best-value {
+    display: none;
+  }
+}

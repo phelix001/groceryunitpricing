@@ -1,0 +1,25 @@
+{
+  "name": "grocery-unit-pricing",
+  "version": "1.0.0",
+  "description": "Chrome extension that automatically displays unit pricing on grocery shopping sites",
+  "main": "manifest.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "echo \"Linting not configured yet\"",
+    "lint:fix": "echo \"Linting not configured yet\"",
+    "build": "echo \"No build step required - extension is ready to load\"",
+    "build:dev": "echo \"No build step required - extension is ready to load\"",
+    "watch": "echo \"Watch mode not configured yet\""
+  },
+  "keywords": [
+    "chrome-extension",
+    "grocery",
+    "unit-pricing",
+    "shopping",
+    "price-comparison"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#4a90e2"/>
+
+  <!-- Shopping cart body -->
+  <path d="M 35 45 L 42 45 L 48 75 L 85 75 L 90 55 L 45 55"
+        fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Cart items (rectangles in cart) -->
+  <rect x="50" y="58" width="10" height="12" fill="white" opacity="0.8"/>
+  <rect x="62" y="58" width="10" height="12" fill="white" opacity="0.8"/>
+  <rect x="74" y="58" width="10" height="12" fill="white" opacity="0.8"/>
+
+  <!-- Cart wheels -->
+  <circle cx="52" cy="82" r="4" fill="white"/>
+  <circle cx="80" cy="82" r="4" fill="white"/>
+
+  <!-- Price tag -->
+  <path d="M 72 42 L 85 42 L 85 35 L 75 35 L 72 38 Z"
+        fill="#ffd700" stroke="white" stroke-width="1.5"/>
+
+  <!-- Dollar sign on tag -->
+  <text x="77" y="40" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#333">$</text>
+</svg>
