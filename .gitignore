@@ -26,3 +26,16 @@ coverage/
 # Temporary files
 *.tmp
 .cache/
+
+# Claude Code files
+.claude/
+.claude.json
+
+# Documentation (except README.md)
+*.md
+!README.md
+
+# Test and debug files
+debug-*.js
+simple-test.js
+ONE_LINE_TEST.txt
